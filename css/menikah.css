@@ -207,6 +207,7 @@ a.navbar-item{
   box-shadow: 0 10px 25px rgba(4,22,47,0.25);
 }
 
+
 .btn-cta:hover {
   background: linear-gradient(180deg, var(--blue-3) 0%, var(--blue-2) 100%);
   transform: translateY(-1px);
