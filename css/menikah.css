@@ -1094,3 +1094,35 @@ a.navbar-item{ color: var(--blue) !important; }
 }
 
 
+/* ===== HERO: si hay capa floral full, la apagamos en MOBILE ===== */
+@media (max-width: 599px){
+
+  /* Por si alguien puso imagen en background del hero */
+  .hero{
+    background-image:
+      radial-gradient(circle at top, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(180deg, var(--blue) 0%, var(--blue-2) 100%) !important;
+  }
+
+  /* Por si hay pseudo-elementos con imagen full */
+  .hero::before,
+  .hero::after{
+    background: none !important;
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Por si hay algún overlay dentro del hero que cubre todo */
+  .hero .hero-decor{
+    display: block !important;
+  }
+
+  /* Ajuste de las esquinas (esto sí te responde el tamaño) */
+  .hero-corner{
+    width: 360px !important;
+    max-width: none !important;
+    height: auto !important;
+  }
+  .hero-corner-tl{ top: -55px !important; left: -85px !important; }
+  .hero-corner-br{ bottom: -70px !important; right: -90px !important; }
+}
