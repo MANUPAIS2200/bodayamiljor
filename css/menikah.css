@@ -863,3 +863,67 @@ a.navbar-item{
   padding: 22px 26px;
   box-shadow: 0 18px 45px rgba(4,22,47,0.12);
 }
+
+/* =========================================================
+   RESPONSIVE FIX – FLORES EN MOBILE (HERO + SECCIONES)
+========================================================= */
+
+/* Evita problemas de "fixed" en mobile (Safari/Chrome) */
+@media (max-width: 768px){
+  .hero{
+    background-attachment: scroll;
+  }
+}
+
+/* ---------- HERO corners: tamaño y posición fluidos ---------- */
+.hero-corner{
+  width: clamp(140px, 26vw, 260px); /* escala prolija */
+  max-width: 46vw;
+}
+
+/* Mobile: más chico + más afuera */
+@media (max-width: 599px){
+  .hero-corner{
+    width: 160px;
+    max-width: 55vw;
+    opacity: 0.92;
+    filter: drop-shadow(0 5px 12px rgba(0,0,0,0.22));
+  }
+
+  .hero-corner-tl{ top: -28px; left: -38px; }
+  .hero-corner-tr{ top: -28px; right: -38px; }
+  .hero-corner-bl{ bottom: -28px; left: -38px; }
+  .hero-corner-br{ bottom: -28px; right: -38px; }
+
+  /* OPCIONAL (recomendado): en mobile dejá solo 2 esquinas */
+  .hero-corner-tr,
+  .hero-corner-bl{
+    display: none;
+  }
+}
+
+/* ---------- Section corners (regular-section) ---------- */
+#regular-section .section-corner{
+  width: clamp(160px, 22vw, 240px);
+  max-width: 52vw;
+  opacity: 0.95;
+}
+
+@media (max-width: 599px){
+  #regular-section .section-corner{
+    width: 190px;
+    max-width: 70vw;
+  }
+
+  /* Empujá para que no se coma el contenido */
+  #regular-section .section-corner-tl{ top: -26px; left: -46px; }
+  #regular-section .section-corner-br{ bottom: -26px; right: -46px; }
+
+  /* "Zona segura" extra para que el texto nunca choque */
+  #regular-section .section-inner{
+    padding-top: 110px;
+    padding-bottom: 110px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
