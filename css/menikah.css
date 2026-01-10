@@ -927,3 +927,91 @@ a.navbar-item{
     padding-right: 18px;
   }
 }
+
+/* =========================================================
+   MOBILE CLEAN VERSION – SOLO 2 FLORES
+========================================================= */
+
+@media (max-width: 599px){
+
+  /* HERO: solo TL y BR */
+  .hero-corner{
+    width: 150px;
+    max-width: 60vw;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .hero-corner-tl{
+    top: -24px;
+    left: -36px;
+  }
+
+  .hero-corner-br{
+    bottom: -26px;
+    right: -38px;
+  }
+
+  /* Ocultamos las otras */
+  .hero-corner-tr,
+  .hero-corner-bl{
+    display: none;
+  }
+
+  /* Centro bien aireado */
+  .hero-center{
+    padding: 120px 20px 160px;
+  }
+
+  .hero-names{
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .hero-details{
+    margin-top: 18px;
+    font-size: 0.95rem;
+  }
+
+  /* ---------- SECTION BLANCA ---------- */
+
+  #regular-section{
+    position: relative;
+    overflow: hidden;
+  }
+
+  #regular-section .section-corner{
+    width: 170px;
+    max-width: 70vw;
+    opacity: 0.95;
+  }
+
+  #regular-section .section-corner-tl{
+    top: -30px;
+    left: -42px;
+  }
+
+  #regular-section .section-corner-br{
+    bottom: -32px;
+    right: -44px;
+  }
+
+  /* Seguridad de texto */
+  #regular-section .section-inner{
+    padding: 130px 18px;
+  }
+
+  .bodytext{
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .nama-lengkap{
+    font-size: 2.1rem;
+  }
+
+  .ampersand{
+    font-size: 2.6rem;
+    margin: 10px 0;
+  }
+}
