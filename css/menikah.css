@@ -1070,7 +1070,7 @@ a.navbar-item{ color: var(--blue) !important; }
 }
 
 /* ===== HERO FLORES: MOBILE GRANDES Y VISIBLES ===== */
-@media (max-width: 599px){
+@media (max-width: 250px){
 
   .hero-corner{
     width: 520px !important;     /* grande de verdad */
