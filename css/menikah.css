@@ -1069,3 +1069,28 @@ a.navbar-item{ color: var(--blue) !important; }
   .rsvp-btn{ min-width: 220px; height: 54px; }
 }
 
+/* ===== HERO FLORES: MOBILE GRANDES Y VISIBLES ===== */
+@media (max-width: 599px){
+
+  .hero-corner{
+    width: 520px !important;     /* grande de verdad */
+    max-width: none !important;
+    opacity: 0.96 !important;
+    transform: scale(1.05) !important; /* + presencia */
+    transform-origin: top left;
+  }
+
+  /* TOP LEFT: menos afuera para que se vea más */
+  .hero-corner-tl{
+    top: -25px !important;
+    left: -35px !important;
+  }
+
+  /* BOTTOM RIGHT: menos afuera para que se vea más */
+  .hero-corner-br{
+    bottom: -35px !important;
+    right: -45px !important;
+    transform-origin: bottom right;
+  }
+}
+
