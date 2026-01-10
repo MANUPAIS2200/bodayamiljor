@@ -150,14 +150,22 @@ a.navbar-item{ color: var(--blue) !important; }
 /* Ajustes mobile (más vistoso como pidió el cliente) */
 @media (max-width: 599px){
   .hero-corner{
-    width: 200px;          /* MÁS GRANDE */
-    max-width: 70vw;
-    opacity: 0.92;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.28));
+    width: 190px;     /* más grande en celu */
+    max-width: 68vw;
+    opacity: 0.95;
   }
-  .hero-corner-tl { top: -28px; left: -42px; }
-  .hero-corner-br { bottom: -30px; right: -46px; }
+
+  .hero-corner-tl{
+    top: -32px;
+    left: -48px;
+  }
+
+  .hero-corner-br{
+    bottom: -36px;
+    right: -50px;
+  }
 }
+
 
 /* =========================
    HERO – KICKER + CARD
@@ -591,4 +599,13 @@ a.navbar-item{ color: var(--blue) !important; }
   /* Tipos más compactos para que no se “coma” la pantalla */
   #regular-section .nama-lengkap{ font-size: 2.15rem; }
   #regular-section .ampersand{ font-size: 2.75rem; margin: 10px 0; }
+}
+#regular-section .bodytext{
+  text-align: justify;
+  text-justify: inter-word;
+
+  /* opcional: mejora en mobile */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-break: normal;
 }
