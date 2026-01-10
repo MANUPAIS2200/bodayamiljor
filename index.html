@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="theme-color" content="#BC8887" />
+  <meta name="theme-color" content="#07275E" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nuestra Boda Yamil &amp; Jor | 14/03/2026</title>
@@ -59,6 +59,15 @@
     <!-- Begin Hero -->
     <section class="hero is-large">
 
+      <!-- DECORACIÓN HERO (ESQUINAS) -->
+      <div class="hero-decor" aria-hidden="true">
+        <img class="hero-corner hero-corner-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="hero-corner hero-corner-tr" src="image/decor/floral-corner-top-right.png" alt="">
+        <img class="hero-corner hero-corner-bl" src="image/decor/floral-corner-bottom-left.png" alt="">
+        <img class="hero-corner hero-corner-br" src="image/decor/floral-corner-bottom-right.png" alt="">
+      </div>
+      <!-- /DECORACIÓN HERO -->
+
       <!-- Begin Mobile Nav -->
       <nav class="navbar is-transparent is-hidden-desktop">
         <!-- Begin Burger Menu -->
@@ -73,27 +82,11 @@
 
         <div id="mobile-nav" class="navbar-menu">
           <div class="navbar-end">
-            <div class="navbar-item">
-              <a class="navbar-item" href="#Waktu">
-                Horario
-              </a>
-            </div>
-            <div class="navbar-item">
-              <a class="navbar-item" href="#lokasi">
-                Ubicación
-              </a>
-            </div>
-
-            <div class="navbar-item">
-              <a class="navbar-item" href="#tentang-pasangan">
-                Sobre la pareja
-              </a>
-            </div>
-            <div class="navbar-item">
-              <a class="navbar-item" href="#rsvp">
-                Confirmación
-              </a>
-            </div>
+            <div class="navbar-item"><a class="navbar-item" href="#Waktu">Horario</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#lokasi">Ubicación</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#tentang-pasangan">Sobre la pareja</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#rsvp">Confirmación</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#fotos">Fotos</a></div>
           </div>
         </div>
       </nav>
@@ -101,87 +94,77 @@
 
       <!-- Begin Hero Content-->
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="subtitle">Nuestra Boda</h1>
-          <h2 class="title">Yamil &amp; Jor</h2>
-          <h4 class="subtitle tempatwaktu">
-            Sábado 14/03/2026
-            </br>
-            Pilar, Buenos Aires
-            </br>
-            Reservá la fecha
-          </h4>
+        <div class="container has-text-centered hero-center">
+
+          <!-- Kicker / etiqueta -->
+          <div class="hero-kicker-wrap">
+            <span class="hero-kicker">Nuestra Boda</span>
+          </div>
+
+          <h2 class="title hero-names">Yamil &amp; Jor</h2>
+
+          <!-- Bloque fecha/lugar -->
+          <div class="hero-details">
+            <div class="hero-details-line">Sábado 14/03/2026</div>
+            <div class="hero-details-line">Pilar, Buenos Aires</div>
+            <div class="hero-details-line">Reservá la fecha</div>
+          </div>
+
+          <!-- Countdown -->
+          <div class="hero-countdown">
+            <ul id="hitungmundur">
+              <li><span class="days">00</span>
+                <p class="days_text">Días</p>
+              </li>
+              <li class="separator">:</li>
+              <li><span class="hours">00</span>
+                <p class="hours_text">Horas</p>
+              </li>
+              <li class="separator">:</li>
+              <li><span class="minutes">00</span>
+                <p class="minutes_text">Minutos</p>
+              </li>
+              <li class="separator">:</li>
+              <li><span class="seconds">00</span>
+                <p class="seconds_text">Segundos</p>
+              </li>
+            </ul>
+
+            <div class="spasi"></div>
+
+            <script type="text/javascript">
+              // IMPORTANTE: el plugin espera formato MM/DD/YYYY
+              // Ceremonia: 14/03/2026 -> 03/14/2026
+              var harih = '03/14/2026 17:00:00';
+
+              $('#hitungmundur').countdown({
+                date: harih,
+                offset: -3, // Huso horario Argentina (UTC-3)
+                day: 'Día',
+                days: 'Días'
+              }, function () {
+                alert('¡Llegó el gran día!');
+              });
+            </script>
+          </div>
+          <!-- /Countdown -->
+
         </div>
-
-        <!-- Start Countdown -->
-        <div>
-          <ul id="hitungmundur">
-            <li><span class="days">00</span>
-              <p class="days_text">Días</p>
-            </li>
-            <li class="separator">:</li>
-            <li><span class="hours">00</span>
-              <p class="hours_text">Horas</p>
-            </li>
-            <li class="separator">:</li>
-            <li><span class="minutes">00</span>
-              <p class="minutes_text">Minutos</p>
-            </li>
-            <li class="separator">:</li>
-            <li><span class="seconds">00</span>
-              <p class="seconds_text">Segundos</p>
-            </li>
-          </ul>
-
-          <div class="spasi"></div>
-
-          <script type="text/javascript">
-            var now = new Date();
-            var day = now.getDate();
-            var month = now.getMonth() + 1;
-            var year = now.getFullYear() + 1;
-
-            var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-
-            // IMPORTANTE: el plugin espera formato MM/DD/YYYY
-            // Ceremonia: 14/03/2026 -> 03/14/2026
-            var harih = '03/14/2026 17:00:00';
-
-            $('#hitungmundur').countdown({
-              date: harih,
-              offset: -3, // Huso horario Argentina (UTC-3)
-              day: 'Día',
-              days: 'Días'
-            }, function () {
-              alert('¡Llegó el gran día!');
-            });
-          </script>
-        </div>
-        <!-- End Countdown -->
       </div>
       <!-- End Hero Content-->
 
       <!-- Begin Hero Menu -->
-      <div class="hero-foot ">
+      <div class="hero-foot">
         <div class="hero-foot--wrapper">
           <div class="columns">
             <div class="column is-12 hero-menu-desktop has-text-centered">
               <ul>
-                <li class="is-active">
-                  <a href="#home">Inicio</a>
-                </li>
-                <li>
-                  <a href="#Waktu">Horario</a>
-                </li>
-                <li>
-                  <a href="#lokasi">Ubicación</a>
-                </li>
-                <li>
-                  <a href="#tentang-pasangan">Sobre la pareja</a>
-                </li>
-                <li>
-                  <a href="#rsvp">Confirmación</a>
-                </li>
+                <li class="is-active"><a href="#home">Inicio</a></li>
+                <li><a href="#Waktu">Horario</a></li>
+                <li><a href="#lokasi">Ubicación</a></li>
+                <li><a href="#tentang-pasangan">Sobre la pareja</a></li>
+                <li><a href="#rsvp">Confirmación</a></li>
+                <li><a href="#fotos">Fotos</a></li>
               </ul>
             </div>
           </div>
@@ -195,38 +178,44 @@
 
   <!-- Begin Main Content -->
   <div class="main-content">
+
     <!-- Begin regular-section-->
     <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content"
       id="regular-section">
 
-      <div data-aos="fade-up" data-aos-easing="linear">
-        <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Separador / Imagen (placeholder)">
+      <!-- Decoración de sección -->
+      <div class="section-decor" aria-hidden="true">
+        <img class="section-corner section-corner-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="section-corner section-corner-br" src="image/decor/floral-corner-bottom-right.png" alt="">
       </div>
 
-      <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-        Con mucha alegría queremos invitarte a compartir con nosotros
-        <br />
-        un momento muy especial en nuestras vidas.
-        <br />
-        Este espacio luego puede tener un mensaje más personal.
-      </p>
+      <!-- Contenido real -->
+      <div class="section-inner">
 
-      <span class="space40px"></span>
-      <span class="space40px"></span>
+        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+          Con mucha alegría queremos invitarte a compartir con nosotros
+          <br />
+          un momento muy especial en nuestras vidas.
+          <br />
+          Este espacio luego puede tener un mensaje más personal.
+        </p>
 
-      <div data-aos="fade-up" data-aos-easing="linear">
-        <div class="nama-lengkap">Jor</div>
-        <div class="ampersand">&</div>
-        <div class="nama-lengkap">Yamil</div>
+        <span class="space40px"></span>
+        <span class="space40px"></span>
+
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <div class="nama-lengkap">Jor</div>
+          <div class="ampersand">&</div>
+          <div class="nama-lengkap">Yamil</div>
+        </div>
+
+        <span class="space40px"></span>
+
+        <span class="space40px"></span>
+        <span class="space40px"></span>
+
       </div>
-
-      <span class="space40px"></span>
-      <div data-aos="fade-up" data-aos-easing="linear">
-        <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-      </div>
-
-      <span class="space40px"></span>
-      <span class="space40px"></span>
+      <!-- /section-inner -->
     </section>
     <!-- End regular-section-->
 
@@ -311,7 +300,7 @@
     </section>
     <!-- End Lokasi Content -->
 
-    <!-- Begin Tentang pasangan -->
+    <!-- Begin Tentang pareja -->
     <section class="section-light regular-section is-fullheight" id="tentang-pasangan">
       <div class="container">
         <div class="columns is-multiline">
@@ -392,9 +381,11 @@
             <!-- IMAGES -->
 
             <div class="space40px"></div>
+
             <div data-aos="fade-up" data-aos-easing="linear">
-              <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
+              <img src="image/decor/floral-divider-center.png" class="divider has-text-centered" alt="Separador">
             </div>
+
             <div class="space40px"></div>
             <div class="space40px"></div>
 
@@ -402,7 +393,7 @@
         </div>
       </div>
     </section>
-    <!-- End Tentang pasangan -->
+    <!-- End Tentang pareja -->
 
     <!-- Begin RSVP Content -->
     <section class="section-dark contact" id="rsvp">
@@ -412,7 +403,7 @@
             <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">
               Confirmación de asistencia
             </h1>
-      
+
             <div class="buttons is-centered" data-aos="zoom-in">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScP30tSPGpE8rSDjA6kzoTaJyZTf9ekHQpVbzOWD_dQhDa0BA/viewform?usp=publish-editor"
                 class="button btn-cta" target="_blank" rel="noopener noreferrer">
@@ -422,54 +413,75 @@
             </div>
           </div>
 
-
           <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
             <p class="h2 subtitle">
               Nos encantaría contar con tu presencia.
               <br>
               En este espacio luego definiremos el texto final y el método de confirmación.
-              <br>
-              Por ahora, dejemos estos botones como referencia.
             </p>
 
-            <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Hola%20Jor,%20confirmo%20mi%20asistencia%20(placeholder)&source=&data="
+            <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Hola%20Jor,%20confirmo%20mi%20asistencia%20(placeholder)"
               class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
               <i class="fab fa-whatsapp"></i>
               &nbsp;&nbsp;Avisar a Jor
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Hola%20Yamil,%20confirmo%20mi%20asistencia%20(placeholder)&source=&data="
+            <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Hola%20Yamil,%20confirmo%20mi%20asistencia%20(placeholder)"
               class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
               <i class="fab fa-whatsapp"></i>
               &nbsp;&nbsp;Avisar a Yamil
             </a>
 
             <div class="space40px"></div>
-            <div class="space40px"></div>
 
             <div data-aos="fade-up" data-aos-easing="linear">
-              <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+              <img src="image/decor/floral-divider-center.png" class="divider has-text-centered" alt="Separador">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End RSVP Content -->
+
+    <!-- =======================
+         SECCIÓN FOTOS + QR
+    ======================== -->
+    <section class="section-light" id="fotos">
+      <div class="container">
+        <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+          <h1 class="title has-text-centered section-title">Fotos</h1>
+          <p class="has-text-centered">
+            Escaneá el QR para subir o ver fotos de la boda.
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-10-tablet is-8-desktop">
+
+            <div class="qr-frame" data-aos="zoom-in">
+              <img class="qr-frame-img" src="image/decor/floral-qr-frame.png" alt="Marco decorativo QR" />
+
+              <div class="qr-frame-content">
+                <img class="qr-img" src="image/decor/qr-placeholder.png" alt="Código QR - Fotos" />
+
+                <div class="space24px"></div>
+
+                <a class="button btn-cta" href="https://TU_LINK_DE_FOTOS" target="_blank" rel="noopener noreferrer">
+                  <i class="far fa-images"></i>
+                  &nbsp;&nbsp;Ver / Subir fotos
+                </a>
+              </div>
             </div>
 
-            <div class="space40px"></div>
-
-            <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-              Con cariño,
-              <br>
-              <a class="instagram" href="https://instagram.com/instagramaccount" target="_blank" alt="Instagram Jor">
-                <i class="fab fa-instagram"></i> @instagramaccount
-              </a>
-              &nbsp
-              <a class="instagram" href="https://instagram.com/instagramaccount" target="_blank" alt="Instagram Yamil">
-                <i class="fab fa-instagram"></i> @instagramaccount
-              </a>
+            <p class="has-text-centered" style="margin-top: 12px;">
+              Si no podés escanear, usá el botón.
             </p>
 
           </div>
         </div>
       </div>
     </section>
-    <!-- End RSVP Content -->
+
   </div>
   <!-- End Main Content -->
 

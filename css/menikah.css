@@ -208,6 +208,7 @@ a.navbar-item{
 }
 
 
+
 .btn-cta:hover {
   background: linear-gradient(180deg, var(--blue-3) 0%, var(--blue-2) 100%);
   transform: translateY(-1px);
@@ -521,4 +522,344 @@ a.navbar-item{
   box-shadow:
     0 16px 35px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+/* =========================
+   QR FRAME (marco decorativo)
+========================= */
+.qr-frame{
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.qr-frame-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qr-frame-content{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* zona “segura” para que no pise flores */
+  padding: 70px 90px;
+}
+
+.qr-img{
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(4,22,47,0.18);
+}
+
+@media (max-width: 768px){
+  .qr-frame-content{
+    padding: 50px 40px;
+  }
+  .qr-img{
+    width: 190px;
+    height: 190px;
+  }
+}
+/* =========================================
+   HERO – DECORACIÓN ESQUINAS (FIX)
+   ========================================= */
+
+/* El hero tiene que ser el contenedor relativo */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* La capa decorativa no debe ocupar layout */
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* El contenido real del hero por arriba de la deco */
+.hero nav,
+.hero .hero-body,
+.hero .hero-foot {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilo base de las imágenes de esquina */
+.hero-corner {
+  position: absolute;
+  height: auto;
+  width: 260px;          /* tamaño default desktop */
+  max-width: 32vw;       /* límite responsive */
+  opacity: 0.98;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.30));
+}
+
+/* Posiciones */
+.hero-corner-tl { top: -22px; left: -22px; }
+.hero-corner-tr { top: -22px; right: -22px; }
+.hero-corner-bl { bottom: -22px; left: -22px; }
+.hero-corner-br { bottom: -22px; right: -22px; }
+
+/* Ajustes tablet */
+@media (max-width: 1024px) {
+  .hero-corner { width: 210px; max-width: 42vw; }
+  .hero-corner-tl, .hero-corner-tr { top: -18px; }
+  .hero-corner-bl, .hero-corner-br { bottom: -18px; }
+}
+
+/* Ajustes mobile: más chico o directamente ocultar */
+@media (max-width: 599px) {
+  .hero-corner { width: 150px; max-width: 48vw; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.28)); }
+  .hero-corner-tl, .hero-corner-tr { top: -14px; }
+  .hero-corner-bl, .hero-corner-br { bottom: -14px; }
+}
+
+/* =========================================
+   HERO – KICKER + CARD (LOOK PREMIUM)
+   ========================================= */
+
+/* Asegura que el contenido del hero quede visualmente centrado y con ancho razonable */
+.hero-center{
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ===== “Nuestra Boda” como etiqueta ===== */
+.hero-kicker-wrap{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.hero-kicker{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  /* glass + borde plateado */
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(214,217,222,0.65);
+  backdrop-filter: blur(6px);
+
+  color: rgba(255,255,255,0.95);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+
+  box-shadow:
+    0 12px 26px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.20);
+}
+
+/* líneas decorativas tipo “badge” */
+.hero-kicker::before,
+.hero-kicker::after{
+  content:"";
+  display:inline-block;
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(230,231,234,0.95), rgba(255,255,255,0));
+  opacity: 0.9;
+}
+
+/* ===== Nombres ===== */
+.hero .title.hero-names{
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+/* ===== Card de detalles (fecha/lugar) ===== */
+.hero-details{
+  display: inline-block;
+  padding: 16px 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(214,217,222,0.55);
+  backdrop-filter: blur(7px);
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+
+  margin-bottom: 18px;
+}
+
+.hero-details-line{
+  color: rgba(255,255,255,0.95);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  padding: 2px 0;
+}
+
+/* Ajustes responsive */
+@media (max-width: 599px){
+  .hero-kicker{
+    font-size: 0.85rem;
+    padding: 9px 16px;
+  }
+  .hero-kicker::before,
+  .hero-kicker::after{
+    width: 22px;
+  }
+  .hero-details{
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+  .hero-details-line{
+    font-size: 1.05rem;
+  }
+}
+/* =========================================
+   SECTION LIGHT – CARD + DECOR SUAVE
+   ========================================= */
+
+#regular-section{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decoración de esquinas */
+.section-decor{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55; /* sutil */
+}
+
+.section-corner{
+  position: absolute;
+  width: 220px;
+  max-width: 34vw;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
+}
+
+.section-corner-tl{ top: -18px; left: -18px; }
+.section-corner-br{ bottom: -18px; right: -18px; }
+
+/* Contenido por arriba de la deco */
+.section-inner{
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Card para el texto (usa el <p class="bodytext"> que ya tenés) */
+#regular-section .bodytext{
+  display: inline-block;
+  max-width: 760px;
+  padding: 18px 22px;
+  margin: 0 auto;
+
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(214,217,222,0.85);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 40px rgba(4,22,47,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+
+  line-height: 1.6;
+}
+
+/* Nombres: un toque de presencia sin exagerar */
+#regular-section .nama-lengkap{
+  text-shadow: 0 10px 22px rgba(4,22,47,0.10);
+}
+
+#regular-section .ampersand{
+  opacity: 0.95;
+  text-shadow: 0 12px 26px rgba(4,22,47,0.10);
+}
+
+/* Mobile */
+@media (max-width: 599px){
+  .section-corner{ width: 150px; max-width: 46vw; }
+  #regular-section .bodytext{
+    padding: 16px 16px;
+    border-radius: 16px;
+  }
+}
+/* =========================
+   SECTION DECOR FIX
+   - Decoración atrás
+   - Contenido adelante
+========================= */
+
+/* El section debe ser el contenedor relativo */
+#regular-section {
+  position: relative;
+  overflow: hidden; /* recorta si algo se va afuera */
+}
+
+/* Decoración siempre atrás */
+#regular-section .section-decor{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* ATRÁS */
+}
+
+/* Contenido siempre adelante */
+#regular-section .section-inner{
+  position: relative;
+  z-index: 2; /* ADELANTE */
+  width: 100%;
+}
+
+/* Ajuste de tamaño/posición de esquinas */
+#regular-section .section-corner{
+  position: absolute;
+  width: 240px;        /* ajustá si querés */
+  max-width: 40vw;
+  height: auto;
+  opacity: 0.98;
+}
+
+#regular-section .section-corner-tl{ top: -18px; left: -18px; }
+#regular-section .section-corner-br{ bottom: -18px; right: -18px; }
+
+/* “Zona segura” para que el texto no se meta en las flores */
+#regular-section .section-inner{
+  padding: 80px 40px;
+}
+
+@media (max-width: 768px){
+  #regular-section .section-inner{ padding: 70px 24px; }
+  #regular-section .section-corner{ width: 170px; max-width: 55vw; }
+  #regular-section .section-corner-tl{ top: -12px; left: -12px; }
+  #regular-section .section-corner-br{ bottom: -12px; right: -12px; }
+}
+
+
+/* Si tu bodytext tiene “tarjeta”, esto asegura buen look y no se rompe */
+#regular-section .bodytext{
+  display: inline-block;
+  max-width: 920px;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(7,39,94,0.12);
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 18px 45px rgba(4,22,47,0.12);
 }
