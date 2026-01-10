@@ -1070,27 +1070,27 @@ a.navbar-item{ color: var(--blue) !important; }
 }
 
 /* ===== HERO FLORES: MOBILE GRANDES Y VISIBLES ===== */
-@media (max-width: 250px){
+/* ===== HERO FLORES: MOBILE AJUSTE (menos grande) ===== */
+@media (max-width: 599px){
 
   .hero-corner{
-    width: 520px !important;     /* grande de verdad */
+    width: 360px !important;   /* antes 520/500: demasiado */
     max-width: none !important;
-    opacity: 0.96 !important;
-    transform: scale(1.05) !important; /* + presencia */
-    transform-origin: top left;
+    opacity: 0.95 !important;
+    transform: none !important; /* sacamos scale */
   }
 
-  /* TOP LEFT: menos afuera para que se vea más */
+  /* Top-left: un poco más afuera */
   .hero-corner-tl{
-    top: -25px !important;
-    left: -35px !important;
+    top: -55px !important;
+    left: -85px !important;
   }
 
-  /* BOTTOM RIGHT: menos afuera para que se vea más */
+  /* Bottom-right: un poco más afuera */
   .hero-corner-br{
-    bottom: -35px !important;
-    right: -45px !important;
-    transform-origin: bottom right;
+    bottom: -70px !important;
+    right: -90px !important;
   }
 }
+
 
