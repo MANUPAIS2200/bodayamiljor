@@ -151,7 +151,7 @@ a.navbar-item{ color: var(--blue) !important; }
 @media (max-width: 599px){
 
   .hero-corner{
-    width: 380px;     /* MUY grande */
+    width: 500px;     /* MUY grande */
     max-width: none;
   }
 
