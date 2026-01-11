@@ -24,9 +24,6 @@
 
   <script src="https://kit.fontawesome.com/2828f7885a.js" crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/jquery.coundown.js"></script>
-
   <link rel="icon" type="image/png" href="image/favicon.png" />
 
   <!-- AOS -->
@@ -45,14 +42,10 @@
   <div class="header-wrapper" id="home">
     <section class="hero is-large">
 
-      <!-- DECOR HERO (solo 2 en mobile) -->
+      <!-- DECOR HERO -->
       <div class="hero-decor" aria-hidden="true">
         <img class="hero-corner hero-corner-tl" src="image/decor/floral-corner-top-left.png" alt="">
         <img class="hero-corner hero-corner-br" src="image/decor/floral-corner-bottom-right.png" alt="">
-        <!-- Desktop opcional: si quisieras sumar otras 2 en desktop, descomentá
-        <img class="hero-corner hero-corner-tr is-hidden-mobile" src="image/decor/floral-corner-top-right.png" alt="">
-        <img class="hero-corner hero-corner-bl is-hidden-mobile" src="image/decor/floral-corner-bottom-left.png" alt="">
-        -->
       </div>
 
       <!-- Mobile Nav -->
@@ -66,15 +59,14 @@
         <div id="mobile-nav" class="navbar-menu">
           <div class="navbar-end">
             <div class="navbar-item"><a class="navbar-item" href="#Waktu">Horario</a></div>
-            <div class="navbar-item"><a class="navbar-item" href="#lokasi">Ubicación</a></div>
-            <div class="navbar-item"><a class="navbar-item" href="#tentang-pasangan">Sobre la pareja</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#Ubicacion">Ubicación</a></div>
             <div class="navbar-item"><a class="navbar-item" href="#rsvp">Confirmación</a></div>
-            <div class="navbar-item"><a class="navbar-item" href="#fotos">Fotos</a></div>
+            <div class="navbar-item"><a class="navbar-item" href="#fotos-novios">Fotos</a></div>
           </div>
         </div>
       </nav>
 
-      <!-- Hero Content (IMPORTANTE: dentro de hero-body para Bulma) -->
+      <!-- Hero Content -->
       <div class="hero-body">
         <div class="container has-text-centered hero-center" data-aos="fade-up" data-aos-easing="linear">
 
@@ -128,10 +120,9 @@
               <ul>
                 <li class="is-active"><a href="#home">Inicio</a></li>
                 <li><a href="#Waktu">Horario</a></li>
-                <li><a href="#lokasi">Ubicación</a></li>
-                <li><a href="#tentang-pasangan">Sobre la pareja</a></li>
+                <li><a href="#Ubicacion">Ubicación</a></li>
                 <li><a href="#rsvp">Confirmación</a></li>
-                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#fotos-novios">Fotos</a></li>
               </ul>
             </div>
           </div>
@@ -140,323 +131,338 @@
 
     </section>
   </div>
-<div class="floral-divider" aria-hidden="true">
-  <img src="image/decor/floral-divider-center.png" alt="">
-</div>
+
+  <div class="floral-divider" aria-hidden="true">
+    <img src="image/decor/floral-divider-center.png" alt="">
+  </div>
+
   <!-- MAIN -->
   <div class="main-content">
 
-    <!-- SECCIÓN BLANCA (mensaje + nombres) -->
+    <!-- SECCIÓN BLANCA -->
     <section class="section-light no-padding-top regular-section has-text-centered" id="regular-section">
+      <div class="section-inner">
+        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+          Con mucha alegría queremos invitarte a compartir con nosotros un momento muy especial en nuestras vidas.
+          Este espacio luego puede tener un mensaje más personal.
+        </p>
+      </div>
 
-      <!-- Decoración sección: SOLO TL y BR -->
-     
+      <div class="space40px"></div>
+      <div class="space40px"></div>
 
-    <div class="section-inner">
-  <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-    Con mucha alegría queremos invitarte a compartir con nosotros un momento muy especial en nuestras vidas.
-    Este espacio luego puede tener un mensaje más personal.
-  </p>
-</div>
+      <div class="names-block" data-aos="fade-up" data-aos-easing="linear">
+        <div class="nama-lengkap">Jor & Yamil</div>
+      </div>
 
-        <!-- Más aire antes de nombres (pedido: “a lo largo y más abajo”) -->
-        <div class="space40px"></div>
-        <div class="space40px"></div>
+      <div class="space40px"></div>
+    </section>
 
-        <div class="names-block" data-aos="fade-up" data-aos-easing="linear">
-          <div class="nama-lengkap">Jor & Yamil</div>
+    <div class="floral-divider" aria-hidden="true">
+      <img src="image/decor/floral-divider-center.png" alt="">
+    </div>
+
+    <!-- HORARIO (FX) -->
+    <section class="section-dark fx" id="Waktu">
+      <div class="section-ornaments" aria-hidden="true">
+        <img class="o-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="o-tr" src="image/decor/floral-corner-top-right.png" alt="">
+        <img class="o-bl" src="image/decor/floral-corner-bottom-left.png" alt="">
+        <img class="o-br" src="image/decor/floral-corner-bottom-right.png" alt="">
+      </div>
+
+      <div class="container">
+        <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+          <h1 class="title has-text-centered section-title">Horario</h1>
         </div>
 
-        <div class="space40px"></div>
+        <div class="schedule-card" data-aos="fade-up" data-aos-easing="linear">
+          <div class="schedule-grid">
+            <div class="schedule-item">
+              <div class="schedule-label">Fecha</div>
+              <div class="schedule-date">
+                <div class="waktu tanggal-hari">Sábado</div>
+                <div class="waktu tanggal-angka">14</div>
+                <div class="waktu tanggal-bulan">Marzo 2026</div>
+              </div>
+            </div>
+
+            <div class="schedule-item">
+              <div class="schedule-label">Ceremonia</div>
+              <div class="schedule-time">
+                <div class="schedule-time-strong">17:00 hs</div>
+              </div>
+            </div>
+
+            <div class="schedule-item">
+              <div class="schedule-label">Recepción</div>
+              <div class="schedule-time">
+                <div class="schedule-time-strong">19:00 – 21:00 hs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-actions" data-aos="zoom-in">
+            <a href="https://calendar.google.com/event?action=TEMPLATE..."
+               target="_blank"
+               class="button btn-cta has-tooltip"
+               data-tooltip="Agregar al calendario">
+              <i class="far fa-calendar-plus"></i>
+              &nbsp;&nbsp;Agregar al calendario
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <div class="floral-divider" aria-hidden="true">
+      <img src="image/decor/floral-divider-center.png" alt="">
+    </div>
+
+    <!-- UBICACIÓN (FX) -->
+    <section class="section-dark fx" id="Ubicacion">
+      <div class="section-ornaments" aria-hidden="true">
+        <img class="o-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="o-tr" src="image/decor/floral-corner-top-right.png" alt="">
+        <img class="o-bl" src="image/decor/floral-corner-bottom-left.png" alt="">
+        <img class="o-br" src="image/decor/floral-corner-bottom-right.png" alt="">
+      </div>
+
+      <div class="container">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up">
+          Ubicación
+        </h1>
+
+        <div class="location-card" data-aos="fade-up">
+          <div class="location-info">
+            <div class="location-badge">Salón</div>
+
+            <h2 class="location-title">Los Jazmines</h2>
+
+            <div class="location-address">
+              <div class="location-line">Florida esquina Centenera</div>
+              <div class="location-line">Del Viso, Buenos Aires</div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/E6nGL7bmbjaC6RXZA"
+              target="_blank"
+              class="location-btn"
+              rel="noopener noreferrer"
+            >
+              Ver en Google Maps
+            </a>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps?q=Florida%20esquina%20Centenera%2C%20Del%20Viso%2C%20Buenos%20Aires&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <div class="floral-divider" aria-hidden="true">
+      <img src="image/decor/floral-divider-center.png" alt="">
+    </div>
+
+    <!-- RSVP (FX) -->
+    <section class="section-dark fx contact" id="rsvp">
+      <div class="section-ornaments" aria-hidden="true">
+        <img class="o-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="o-tr" src="image/decor/floral-corner-top-right.png" alt="">
+        <img class="o-bl" src="image/decor/floral-corner-bottom-left.png" alt="">
+        <img class="o-br" src="image/decor/floral-corner-bottom-right.png" alt="">
+      </div>
+
+      <div class="container">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up">
+          Confirmación de asistencia
+        </h1>
+
+        <div class="rsvp-card" data-aos="fade-up" data-aos-easing="linear">
+          <p class="rsvp-text">
+            Para organizarnos mejor, por favor confirmá tu asistencia completando el formulario.
+          </p>
+
+          <div class="rsvp-actions" data-aos="zoom-in">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScP30tSPGpE8rSDjA6kzoTaJyZTf9ekHQpVbzOWD_dQhDa0BA/viewform?usp=publish-editor"
+              class="button rsvp-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="far fa-check-circle"></i>
+              &nbsp;&nbsp;Confirmar asistencia
+            </a>
+          </div>
+
+          <p class="rsvp-note">
+            Si tenés alguna restricción alimentaria, podés indicarla en el formulario.
+          </p>
+        </div>
+      </div>
+
      
     </section>
-<div class="floral-divider" aria-hidden="true">
-  <img src="image/decor/floral-divider-center.png" alt="">
-</div>
-    <!-- Horario -->
-  <section class="section-dark" id="Waktu">
-  <div class="container">
 
-    <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-      <h1 class="title has-text-centered section-title">Horario</h1>
-    </div>
-
-    <!-- Card premium -->
-    <div class="schedule-card" data-aos="fade-up" data-aos-easing="linear">
-
-      <div class="schedule-grid">
-
-        <!-- Fecha -->
-        <div class="schedule-item">
-          <div class="schedule-label">Fecha</div>
-          <div class="schedule-date">
-            <div class="waktu tanggal-hari">Sábado</div>
-            <div class="waktu tanggal-angka">14</div>
-            <div class="waktu tanggal-bulan">Marzo 2026</div>
-          </div>
-        </div>
-
-        <!-- Ceremonia -->
-        <div class="schedule-item">
-          <div class="schedule-label">Ceremonia</div>
-          <div class="schedule-time">
-            <div class="schedule-time-strong">17:00 hs</div>
-          </div>
-        </div>
-
-        <!-- Recepción -->
-        <div class="schedule-item">
-          <div class="schedule-label">Recepción</div>
-          <div class="schedule-time">
-            <div class="schedule-time-strong">19:00 – 21:00 hs</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="schedule-actions" data-aos="zoom-in">
-        <a href="https://calendar.google.com/event?action=TEMPLATE..."
-           target="_blank"
-           class="button btn-cta has-tooltip"
-           data-tooltip="Agregar al calendario">
-          <i class="far fa-calendar-plus"></i>
-          &nbsp;&nbsp;Agregar al calendario
-        </a>
-      </div>
-
-    </div>
-    <!-- /schedule-card -->
-
-  </div>
-</section>
-<div class="floral-divider" aria-hidden="true">
-  <img src="image/decor/floral-divider-center.png" alt="">
-</div>
-
-    <!-- Ubicación -->
-<section class="section-dark" id="Ubicacion">
-  <div class="container">
-
-    <h1 class="title has-text-centered section-title" data-aos="fade-up">
-      Ubicación
-    </h1>
-
-    <div class="location-card" data-aos="fade-up">
-
-      <div class="location-info">
-        <div class="location-badge">Salón</div>
-
-        <h2 class="location-title">Los Jazmines</h2>
-
-        <div class="location-address">
-          <div class="location-line">Florida esquina Centenera</div>
-          <div class="location-line">Del Viso, Buenos Aires</div>
-        </div>
-
-        <a
-          href="https://maps.app.goo.gl/E6nGL7bmbjaC6RXZA"
-          target="_blank"
-          class="location-btn"
-          rel="noopener noreferrer"
-        >
-          Ver en Google Maps
-        </a>
-      </div>
-
-      <div class="map-wrapper">
-        <iframe
-          src="https://www.google.com/maps?q=Florida%20esquina%20Centenera%2C%20Del%20Viso%2C%20Buenos%20Aires&output=embed"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<div class="floral-divider" aria-hidden="true">
-  <img src="image/decor/floral-divider-center.png" alt="">
-</div>
-    <!-- Confirmación -->
- <!-- Confirmación -->
-<section class="section-dark contact" id="rsvp">
-  <div class="container">
-
-    <h1 class="title has-text-centered section-title" data-aos="fade-up">
-      Confirmación de asistencia
-    </h1>
-
-    <div class="rsvp-card" data-aos="fade-up" data-aos-easing="linear">
-      <p class="rsvp-text">
-        Para organizarnos mejor, por favor confirmá tu asistencia completando el formulario.
-      </p>
-
-      <div class="rsvp-actions" data-aos="zoom-in">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScP30tSPGpE8rSDjA6kzoTaJyZTf9ekHQpVbzOWD_dQhDa0BA/viewform?usp=publish-editor"
-          class="button rsvp-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="far fa-check-circle"></i>
-          &nbsp;&nbsp;Confirmar asistencia
-        </a>
-      </div>
-
-      <p class="rsvp-note">
-        Si tenés alguna restricción alimentaria, podés indicarla en el formulario.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Fotos + QR -->
-   <!-- Fotos -->
     <div class="floral-divider" aria-hidden="true">
-  <img src="image/decor/floral-divider-center.png" alt="">
-</div>
+      <img src="image/decor/floral-divider-center.png" alt="">
+    </div>
 
-<!-- Fotos de los novios -->
-<section class="section-dark" id="fotos-novios">
-  <div class="container">
+    <!-- FOTOS NOVIOS (FX) -->
+    <section class="section-dark fx" id="fotos-novios">
+      <div class="section-ornaments" aria-hidden="true">
+        <img class="o-tl" src="image/decor/floral-corner-top-left.png" alt="">
+        <img class="o-tr" src="image/decor/floral-corner-top-right.png" alt="">
+        <img class="o-bl" src="image/decor/floral-corner-bottom-left.png" alt="">
+        <img class="o-br" src="image/decor/floral-corner-bottom-right.png" alt="">
+      </div>
 
-    <h1 class="title has-text-centered section-title" data-aos="fade-up">
-      Fotos de los novios
-    </h1>
+      <div class="container">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up">
+          Fotos de los novios
+        </h1>
 
-    <div class="couple-photos-card" data-aos="fade-up" data-aos-easing="linear">
+        <div class="couple-photos-card" data-aos="fade-up" data-aos-easing="linear">
+          <div class="couple-photos-grid">
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto1.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 1</p>
+                <p class="couple-photo-subtitle">Nuestro primer viaje juntos.</p>
+              </div>
+            </article>
 
-      <div class="couple-photos-grid">
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto2.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 2</p>
+                <p class="couple-photo-subtitle">Un día que no nos olvidamos más.</p>
+              </div>
+            </article>
 
-        <!-- Foto 1 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto1.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 1</p>
-            <p class="couple-photo-subtitle">Nuestro primer viaje juntos.</p>
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto3.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 3</p>
+                <p class="couple-photo-subtitle">La historia sigue creciendo.</p>
+              </div>
+            </article>
+
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto4.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 4</p>
+                <p class="couple-photo-subtitle">Celebrando con familia y amigos.</p>
+              </div>
+            </article>
+
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto5.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 5</p>
+                <p class="couple-photo-subtitle">El “sí” más lindo.</p>
+              </div>
+            </article>
+
+            <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
+              <div class="couple-photo-img" style="background-image:url('image/novios/foto6.jpg');"></div>
+              <div class="couple-photo-content">
+                <p class="couple-photo-title">Foto 6</p>
+                <p class="couple-photo-subtitle">Rumbo a esta nueva etapa.</p>
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
 
-        <!-- Foto 2 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto2.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 2</p>
-            <p class="couple-photo-subtitle">Un día que no nos olvidamos más.</p>
-          </div>
-        </article>
+        <div class="space24px"></div>
 
-        <!-- Foto 3 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto3.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 3</p>
-            <p class="couple-photo-subtitle">La historia sigue creciendo.</p>
-          </div>
-        </article>
+        <div class="photos-card" data-aos="fade-up" data-aos-easing="linear">
+          <p class="photos-text">
+            Escaneá el QR para subir tus fotos de la boda al álbum compartido. Si preferís, usá el botón.
+          </p>
 
-        <!-- Foto 4 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto4.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 4</p>
-            <p class="couple-photo-subtitle">Celebrando con familia y amigos.</p>
-          </div>
-        </article>
+          <div class="photos-qr-card" data-aos="zoom-in">
+            <div class="photos-qr-left">
+              <img class="qr-frame-img" src="image/decor/floral-qr-frame.png" alt="Marco decorativo QR" />
 
-        <!-- Foto 5 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto5.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 5</p>
-            <p class="couple-photo-subtitle">El “sí” más lindo.</p>
-          </div>
-        </article>
+              <img
+                class="qr-img"
+                src="https://quickchart.io/qr?size=260&margin=1&text=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1paei846CU-nHSXG17eD5dzFG-08OMSf1%3Fusp%3Dsharing"
+                alt="Código QR para subir fotos"
+                loading="lazy"
+              />
 
-        <!-- Foto 6 -->
-        <article class="couple-photo" data-aos="fade-up" data-aos-easing="linear">
-          <div class="couple-photo-img" style="background-image:url('image/novios/foto6.jpg');"></div>
-          <div class="couple-photo-content">
-            <p class="couple-photo-title">Foto 6</p>
-            <p class="couple-photo-subtitle">Rumbo a esta nueva etapa.</p>
+              <p class="photos-qr-hint">Abrí la cámara y apuntá al código.</p>
+            </div>
+
+            <div class="photos-qr-right">
+              <div class="photos-upload-badge">Álbum compartido</div>
+
+              <h3 class="photos-upload-title">Subí tus fotos</h3>
+
+              <p class="photos-upload-desc">
+                Ayudanos a guardar todos los recuerdos del día. Podés subir fotos y videos desde tu celular.
+              </p>
+
+              <a
+                class="photos-btn"
+                href="https://drive.google.com/drive/folders/1paei846CU-nHSXG17eD5dzFG-08OMSf1?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="far fa-images"></i>&nbsp;&nbsp;Ver / Subir fotos
+              </a>
+
+              <p class="photos-note">
+                Tip: si tu cámara no lee el código, entrá desde el botón.
+              </p>
+            </div>
           </div>
-        </article>
+        </div>
 
       </div>
 
-    </div>
-  </div>
-</section>
+     
+    </section>
 
-
-<div class="photos-card" data-aos="fade-up" data-aos-easing="linear">
-  <p class="photos-text">
-    Escaneá el QR para subir tus fotos de la boda al álbum compartido. Si preferís, usá el botón.
-  </p>
-
-  <div class="photos-qr-card" data-aos="zoom-in">
-
-    <!-- Columna QR -->
-    <div class="photos-qr-left">
-      <!-- Marco opcional: si no existe, lo ocultamos con CSS (ver más abajo) -->
-      <img class="qr-frame-img" src="image/decor/floral-qr-frame.png" alt="Marco decorativo QR" />
-
-      <!-- QR REAL generado por URL (no depende de qr-placeholder.png) -->
-      <img
-        class="qr-img"
-        src="https://quickchart.io/qr?size=260&margin=1&text=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1paei846CU-nHSXG17eD5dzFG-08OMSf1%3Fusp%3Dsharing"
-        alt="Código QR para subir fotos"
-        loading="lazy"
-      />
-
-      <p class="photos-qr-hint">Abrí la cámara y apuntá al código.</p>
-    </div>
-
-    <!-- Columna CTA -->
-    <div class="photos-qr-right">
-      <div class="photos-upload-badge">Álbum compartido</div>
-
-      <h3 class="photos-upload-title">Subí tus fotos</h3>
-
-      <p class="photos-upload-desc">
-        Ayudanos a guardar todos los recuerdos del día. Podés subir fotos y videos desde tu celular.
-      </p>
-
-      <a
-        class="photos-btn"
-        href="https://drive.google.com/drive/folders/1paei846CU-nHSXG17eD5dzFG-08OMSf1?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="far fa-images"></i>&nbsp;&nbsp;Ver / Subir fotos
-      </a>
-
-      <p class="photos-note">
-        Tip: si tu cámara no lee el código, entrá desde el botón.
-      </p>
+    <div class="floral-divider" aria-hidden="true">
+      <img src="image/decor/floral-divider-center.png" alt="">
     </div>
 
   </div>
-</div>
-
-
-
-  </div>
-
-
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menikah.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ easing: "ease-out", duration: 800 });
-  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.coundown.js"></script>
+
+<script>
+  // IMPORTANTE: el plugin espera formato MM/DD/YYYY
+  var harih = '03/14/2026 17:00:00';
+  $('#hitungmundur').countdown({
+    date: harih,
+    offset: -3,
+    day: 'Día',
+    days: 'Días'
+  }, function () {
+    alert('¡Llegó el gran día!');
+  });
+</script>
+
+<script src="js/menikah.js"></script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init({ easing: "ease-out", duration: 800 });
+</script>
+
 </body>
 </html>
