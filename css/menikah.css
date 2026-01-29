@@ -1166,10 +1166,17 @@ a.navbar-item{ color: var(--blue) !important; }
 
 .couple-photo-img{
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background-size: cover;
-  background-position: center;
+  /* sin aspect-ratio: dejamos que la imagen decida la altura */
+  background-size: contain;          /* se ve completa, sin cortes */
+  background-position: center center;
+  background-repeat: no-repeat;
   filter: saturate(1.02) contrast(1.02);
+}
+
+@media (max-width: 599px){
+  .couple-photos-card{ padding: 18px; border-radius: 20px; }
+  .couple-photos-grid{ grid-template-columns: 1fr; gap: 14px; }
+  /* ya no sobreescribimos .couple-photo-img acá */
 }
 
 .couple-photo-content{
