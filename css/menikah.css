@@ -1621,3 +1621,13 @@ a.navbar-item{ color: var(--blue) !important; }
   opacity: 0.9 !important;
   animation: none !important;
 }
+/* Nombres más grandes en la sección del alias */
+.nama-lengkap-big {
+  font-size: 10rem !important;   /* desktop */
+}
+
+@media (max-width: 599px){
+  .nama-lengkap-big {
+    font-size: 10rem !important; /* mobile */
+  }
+}
